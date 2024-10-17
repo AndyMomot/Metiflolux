@@ -26,7 +26,7 @@ struct BackButton: View {
                 Spacer()
             }
             .foregroundStyle(.white)
-//            .font(Fonts.KulimPark.bold.swiftUIFont(size: 30))
+            .font(Fonts.Inter.bold.swiftUIFont(size: 20))
         }
         .navigationBarBackButtonHidden()
     }
@@ -34,6 +34,7 @@ struct BackButton: View {
 
 #Preview {
     ZStack {
+        Color.gray
         BackButton(title: "Telefony") {}
     }
 }

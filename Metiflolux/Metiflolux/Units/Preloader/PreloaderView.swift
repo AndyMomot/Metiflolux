@@ -41,7 +41,7 @@ struct PreloaderView: View {
                     
                     Text("Ładowanie")
                         .foregroundStyle(.white)
-                        .font(Fonts.ReadexPro.regular.swiftUIFont(size: 15))
+                        .font(Fonts.Inter.regular.swiftUIFont(size: 15))
                         .multilineTextAlignment(.center)
                 }
                 .padding(.horizontal, 76)

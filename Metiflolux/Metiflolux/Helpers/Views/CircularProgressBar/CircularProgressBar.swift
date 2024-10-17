@@ -14,21 +14,21 @@ struct CircularProgressBar: View {
     var progressColors: Color = .red
     
     var textColor: Color = .blue
-//    var font = Fonts.KulimPark.bold.swiftUIFont(size: 35)
+    var font: SwiftUI.Font?
     
     var progress: Double
     
     var body: some View {
         ZStack {
             Circle()
-                .stroke( // 1
+                .stroke(
                     backgroundColor,
                     lineWidth: lineWidth
                 )
             
             Circle()
                 .trim(from: 0, to: progress)
-                .stroke( // 1
+                .stroke(
                     progressColors,
                     style: .init(
                         lineWidth: lineWidth,
@@ -40,7 +40,7 @@ struct CircularProgressBar: View {
             
             Text((progress * 100).string() + "%")
                 .foregroundStyle(textColor)
-//                .font(font)
+                .font(font)
                 .lineLimit(2)
                 .minimumScaleFactor(0.6)
         }

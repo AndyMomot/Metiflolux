@@ -20,37 +20,49 @@ internal typealias Font = FontConvertible.Font
 
 // swiftlint:disable identifier_name line_length type_body_length
 internal enum Fonts {
-  internal enum Inter18pt {
-    internal static let black = FontConvertible(name: "Inter18pt-Black", family: "Inter 18pt", path: "Inter_18pt-Black.ttf")
-    internal static let blackItalic = FontConvertible(name: "Inter18pt-BlackItalic", family: "Inter 18pt", path: "Inter_18pt-BlackItalic.ttf")
-    internal static let bold = FontConvertible(name: "Inter18pt-Bold", family: "Inter 18pt", path: "Inter_18pt-Bold.ttf")
-    internal static let boldItalic = FontConvertible(name: "Inter18pt-BoldItalic", family: "Inter 18pt", path: "Inter_18pt-BoldItalic.ttf")
-    internal static let extraBold = FontConvertible(name: "Inter18pt-ExtraBold", family: "Inter 18pt", path: "Inter_18pt-ExtraBold.ttf")
-    internal static let extraBoldItalic = FontConvertible(name: "Inter18pt-ExtraBoldItalic", family: "Inter 18pt", path: "Inter_18pt-ExtraBoldItalic.ttf")
-    internal static let extraLight = FontConvertible(name: "Inter18pt-ExtraLight", family: "Inter 18pt", path: "Inter_18pt-ExtraLight.ttf")
-    internal static let extraLightItalic = FontConvertible(name: "Inter18pt-ExtraLightItalic", family: "Inter 18pt", path: "Inter_18pt-ExtraLightItalic.ttf")
-    internal static let italic = FontConvertible(name: "Inter18pt-Italic", family: "Inter 18pt", path: "Inter_18pt-Italic.ttf")
-    internal static let light = FontConvertible(name: "Inter18pt-Light", family: "Inter 18pt", path: "Inter_18pt-Light.ttf")
-    internal static let lightItalic = FontConvertible(name: "Inter18pt-LightItalic", family: "Inter 18pt", path: "Inter_18pt-LightItalic.ttf")
-    internal static let medium = FontConvertible(name: "Inter18pt-Medium", family: "Inter 18pt", path: "Inter_18pt-Medium.ttf")
-    internal static let mediumItalic = FontConvertible(name: "Inter18pt-MediumItalic", family: "Inter 18pt", path: "Inter_18pt-MediumItalic.ttf")
-    internal static let regular = FontConvertible(name: "Inter18pt-Regular", family: "Inter 18pt", path: "Inter_18pt-Regular.ttf")
-    internal static let semiBold = FontConvertible(name: "Inter18pt-SemiBold", family: "Inter 18pt", path: "Inter_18pt-SemiBold.ttf")
-    internal static let semiBoldItalic = FontConvertible(name: "Inter18pt-SemiBoldItalic", family: "Inter 18pt", path: "Inter_18pt-SemiBoldItalic.ttf")
-    internal static let thin = FontConvertible(name: "Inter18pt-Thin", family: "Inter 18pt", path: "Inter_18pt-Thin.ttf")
-    internal static let thinItalic = FontConvertible(name: "Inter18pt-ThinItalic", family: "Inter 18pt", path: "Inter_18pt-ThinItalic.ttf")
+  internal enum Inter {
+    internal static let black = FontConvertible(name: "Inter-Black", family: "Inter", path: "Inter-Black.otf")
+    internal static let blackItalic = FontConvertible(name: "Inter-BlackItalic", family: "Inter", path: "Inter-BlackItalic.otf")
+    internal static let bold = FontConvertible(name: "Inter-Bold", family: "Inter", path: "Inter-Bold.otf")
+    internal static let boldItalic = FontConvertible(name: "Inter-BoldItalic", family: "Inter", path: "Inter-BoldItalic.otf")
+    internal static let extraBold = FontConvertible(name: "Inter-ExtraBold", family: "Inter", path: "Inter-ExtraBold.otf")
+    internal static let extraBoldItalic = FontConvertible(name: "Inter-ExtraBoldItalic", family: "Inter", path: "Inter-ExtraBoldItalic.otf")
+    internal static let extraLight = FontConvertible(name: "Inter-ExtraLight", family: "Inter", path: "Inter-ExtraLight.otf")
+    internal static let extraLightItalic = FontConvertible(name: "Inter-ExtraLightItalic", family: "Inter", path: "Inter-ExtraLightItalic.otf")
+    internal static let italic = FontConvertible(name: "Inter-Italic", family: "Inter", path: "Inter-Italic.otf")
+    internal static let light = FontConvertible(name: "Inter-Light", family: "Inter", path: "Inter-Light.otf")
+    internal static let lightItalic = FontConvertible(name: "Inter-LightItalic", family: "Inter", path: "Inter-LightItalic.otf")
+    internal static let medium = FontConvertible(name: "Inter-Medium", family: "Inter", path: "Inter-Medium.otf")
+    internal static let mediumItalic = FontConvertible(name: "Inter-MediumItalic", family: "Inter", path: "Inter-MediumItalic.otf")
+    internal static let regular = FontConvertible(name: "Inter-Regular", family: "Inter", path: "Inter-Regular.otf")
+    internal static let semiBold = FontConvertible(name: "Inter-SemiBold", family: "Inter", path: "Inter-SemiBold.otf")
+    internal static let semiBoldItalic = FontConvertible(name: "Inter-SemiBoldItalic", family: "Inter", path: "Inter-SemiBoldItalic.otf")
+    internal static let thin = FontConvertible(name: "Inter-Thin", family: "Inter", path: "Inter-Thin.otf")
+    internal static let thinItalic = FontConvertible(name: "Inter-ThinItalic", family: "Inter", path: "Inter-ThinItalic.otf")
     internal static let all: [FontConvertible] = [black, blackItalic, bold, boldItalic, extraBold, extraBoldItalic, extraLight, extraLightItalic, italic, light, lightItalic, medium, mediumItalic, regular, semiBold, semiBoldItalic, thin, thinItalic]
   }
-  internal enum ReadexPro {
-    internal static let bold = FontConvertible(name: "ReadexPro-Bold", family: "Readex Pro", path: "ReadexPro-Bold.ttf")
-    internal static let extraLight = FontConvertible(name: "ReadexPro-ExtraLight", family: "Readex Pro", path: "ReadexPro-ExtraLight.ttf")
-    internal static let light = FontConvertible(name: "ReadexPro-Light", family: "Readex Pro", path: "ReadexPro-Light.ttf")
-    internal static let medium = FontConvertible(name: "ReadexPro-Medium", family: "Readex Pro", path: "ReadexPro-Medium.ttf")
-    internal static let regular = FontConvertible(name: "ReadexPro-Regular", family: "Readex Pro", path: "ReadexPro-Regular.ttf")
-    internal static let semiBold = FontConvertible(name: "ReadexPro-SemiBold", family: "Readex Pro", path: "ReadexPro-SemiBold.ttf")
-    internal static let all: [FontConvertible] = [bold, extraLight, light, medium, regular, semiBold]
+  internal enum InterV {
+    internal static let regular = FontConvertible(name: "InterV", family: "Inter V", path: "Inter-V.ttf")
+    internal static let black = FontConvertible(name: "InterV_Black", family: "Inter V", path: "Inter-V.ttf")
+    internal static let blackItalic = FontConvertible(name: "InterV_Black-Italic", family: "Inter V", path: "Inter-V.ttf")
+    internal static let bold = FontConvertible(name: "InterV_Bold", family: "Inter V", path: "Inter-V.ttf")
+    internal static let boldItalic = FontConvertible(name: "InterV_Bold-Italic", family: "Inter V", path: "Inter-V.ttf")
+    internal static let extraBold = FontConvertible(name: "InterV_Extra-Bold", family: "Inter V", path: "Inter-V.ttf")
+    internal static let extraBoldItalic = FontConvertible(name: "InterV_Extra-Bold-Italic", family: "Inter V", path: "Inter-V.ttf")
+    internal static let extraLight = FontConvertible(name: "InterV_Extra-Light", family: "Inter V", path: "Inter-V.ttf")
+    internal static let extraLightItalic = FontConvertible(name: "InterV_Extra-Light-Italic", family: "Inter V", path: "Inter-V.ttf")
+    internal static let italic = FontConvertible(name: "InterV_Italic", family: "Inter V", path: "Inter-V.ttf")
+    internal static let light = FontConvertible(name: "InterV_Light", family: "Inter V", path: "Inter-V.ttf")
+    internal static let lightItalic = FontConvertible(name: "InterV_Light-Italic", family: "Inter V", path: "Inter-V.ttf")
+    internal static let medium = FontConvertible(name: "InterV_Medium", family: "Inter V", path: "Inter-V.ttf")
+    internal static let mediumItalic = FontConvertible(name: "InterV_Medium-Italic", family: "Inter V", path: "Inter-V.ttf")
+    internal static let semiBold = FontConvertible(name: "InterV_Semi-Bold", family: "Inter V", path: "Inter-V.ttf")
+    internal static let semiBoldItalic = FontConvertible(name: "InterV_Semi-Bold-Italic", family: "Inter V", path: "Inter-V.ttf")
+    internal static let thin = FontConvertible(name: "InterV_Thin", family: "Inter V", path: "Inter-V.ttf")
+    internal static let thinItalic = FontConvertible(name: "InterV_Thin-Italic", family: "Inter V", path: "Inter-V.ttf")
+    internal static let all: [FontConvertible] = [regular, black, blackItalic, bold, boldItalic, extraBold, extraBoldItalic, extraLight, extraLightItalic, italic, light, lightItalic, medium, mediumItalic, semiBold, semiBoldItalic, thin, thinItalic]
   }
-  internal static let allCustomFonts: [FontConvertible] = [Inter18pt.all, ReadexPro.all].flatMap { $0 }
+  internal static let allCustomFonts: [FontConvertible] = [Inter.all, InterV.all].flatMap { $0 }
   internal static func registerAllCustomFonts() {
     allCustomFonts.forEach { $0.register() }
   }

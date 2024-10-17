@@ -1,11 +1,10 @@
-strings:
-  inputs:
-    - Metiflolux/Resources/Localization
-  outputs:
-    - templateName: structured-swift5
-      output: Metiflolux/Resources/Localization/Strings.generated.swift
+fonts:
+  - inputs: Metiflolux/Resources/Fonts
+    outputs:
+    - templateName: swift5
+      output: Metiflolux/Resources/Fonts/Fonts.generated.swift
       params:
-        enumName: Strings
+        enumName: Fonts
 
 xcassets:
   - inputs:
@@ -20,12 +19,3 @@ xcassets:
         output: Metiflolux/Resources/Colors/Colors.generated.swift
         params:
           enumName: Colors
-          
-fonts:
-  - inputs: Metiflolux/Resources/Fonts
-    outputs:
-    - templateName: swift5
-      output: Metiflolux/Resources/Fonts/Fonts.generated.swift
-      params:
-        enumName: Fonts
-

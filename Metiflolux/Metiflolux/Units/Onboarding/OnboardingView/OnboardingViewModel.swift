@@ -17,36 +17,36 @@ extension OnboardingView {
         case second
         case third
         
-        var whiteTitle: String {
+        var bgImage: String {
             switch self {
             case .first:
-                return "Efektywne planowanie dzięki "
+                return Asset.onboard1.name
             case .second:
-                return "Kontroluj swoje "
+                return Asset.onboard2.name
             case .third:
-                return "Optymalizuj "
+                return Asset.onboard3.name
             }
         }
         
-        var orangeTitle: String {
+        var title: String {
             switch self {
             case .first:
-                return "analizie kosztów produkcji!"
+                return "Identyfikacja wizualna"
             case .second:
-                return "koszty z łatwością"
+                return "Baza kontrahentów"
             case .third:
-                return "wydatki i zwiększaj zyski!"
+                return "Kalkulacja finansowa"
             }
         }
         
         var text: String {
             switch self {
             case .first:
-                return "Stworzony dla przedsiębiorców prowadzących dowolną formę firmy, a także osób prowadzących jednoosobową działalność gospodarczą i osób fizycznych."
+                return "Stwórz skuteczną identyfikację wizualną dla swojej kwiaciarni dzięki naszemu szablonowi. Pomoże Ci ona wyróżnić się na rynku i podkreślić Twój wizerunek."
             case .second:
-                return "Podejmuj decyzje, które pozwolą zaoszczędzić pieniądze i zwiększyć zyski!"
+                return "Wypełnij bazę kontrahentów, w tym ogrodników i firm pakujących. Każdy będzie mógł łatwo wprowadzić swoje dane, co ułatwi nawiązywanie kontaktów biznesowych."
             case .third:
-                return "Oceń opłacalność inwestycji w swój biznes i wybierz najbardziej opłacalną dla Ciebie opcję! Projekty wynajmu pokażą Ci, jak wydatki wpływają na dochody!"
+                return "Uzyskaj dokładną kalkulację kosztów franczyzy lub zakupu biznesu. Planuj promocje i wspieraj swój biznes na wszystkie dostępne sposoby!"
             }
         }
         

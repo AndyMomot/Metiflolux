@@ -18,59 +18,87 @@ struct PrivacyPolicyView: View {
     
     var body: some View {
         ZStack {
-            Color.blue
+            Asset.privacyBg.swiftUIImage
+                .resizable()
                 .ignoresSafeArea()
             
             VStack {
                 Text("Polityka prywatności")
-                    .foregroundStyle(.white)
-//                    .font(Fonts.KulimPark.bold.swiftUIFont(size: 40))
-                    .multilineTextAlignment(.center)
+                    .foregroundStyle(Colors.graphit.swiftUIColor)
+                    .font(Fonts.Inter.bold.swiftUIFont(size: 30))
                 
-                VStack(spacing: 4) {
-                    Button {
-                        viewModel.showPrivacyPolicy.toggle()
-                    } label: {
-                        Text("Zapoznałem się z polityką prywatności")
-                            .foregroundStyle(.white)
-//                            .font(Fonts.KulimPark.regular.swiftUIFont(size: 15))
-                            .multilineTextAlignment(.center)
-                    }
-                    
-                    Button {
-                        withAnimation {
-                            viewModel.isAgreed.toggle()
-                        }
-                    } label: {
-                        RoundedRectangle(cornerRadius: 4)
-                            .foregroundStyle(.white)
-                            .scaledToFit()
-                            .overlay {
-                                RoundedRectangle(cornerRadius: 4)
-//                                    .stroke(Colors.liteBlue.swiftUIColor, lineWidth: 1)
-                            }
-                            .overlay {
-                                if viewModel.isAgreed {
-                                    Image(systemName: "checkmark")
-//                                        .foregroundStyle(Colors.liteBlue.swiftUIColor)
+                Asset.privacyPhone.swiftUIImage
+                    .resizable()
+                    .scaledToFit()
+                
+                Rectangle()
+                    .foregroundStyle(Colors.dipBlue.swiftUIColor)
+                    .cornerRadius(30, corners: [.topLeft, .topRight])
+                    .ignoresSafeArea(edges: .bottom)
+                    .overlay {
+                        VStack(spacing: 30) {
+                            Spacer()
+                            
+                            Button {
+                                withAnimation {
+                                    viewModel.showPrivacyPolicy.toggle()
                                 }
+                            } label: {
+                                Text("Zapoznałem się z polityką prywatności")
+                                    .foregroundStyle(.white)
+                                    .font(Fonts.Inter.medium.swiftUIFont(size: 15))
+                                    .underline()
+                                    .padding(.horizontal)
                             }
-                            .frame(width: 26)
-                            .padding(8)
-                    }
-                    
-                    Button {
-                        withAnimation {
-                            viewModel.showMainFlow(rootViewModel: rootViewModel)
+                            
+                            Button {
+                                withAnimation {
+                                    viewModel.isAgreed.toggle()
+                                }
+                            } label: {
+                                ZStack {
+                                    if viewModel.isAgreed {
+                                        RoundedRectangle(cornerRadius: 5)
+                                            .foregroundStyle(Colors.graphit.swiftUIColor)
+                                            .scaledToFit()
+                                            .frame(width: 27)
+                                        
+                                        Image(systemName: "checkmark.circle.fill")
+                                            .foregroundStyle(.white)
+                                            .hidden(!viewModel.isAgreed)
+                                    } else {
+                                        RoundedRectangle(cornerRadius: 5)
+                                            .stroke(Color.white, lineWidth: 2)
+                                            .scaledToFit()
+                                            .frame(width: 27)
+                                    }
+                                }
+                                .frame(width: 44, height: 44)
+                            }
+                            
+                            Button {
+                                viewModel.showMainFlow(rootViewModel: rootViewModel)
+                            } label: {
+                                ZStack {
+                                    var color: Color {
+                                        viewModel.isAgreed ? .white : .liteBlue
+                                    }
+                                    
+                                    color
+                                        .cornerRadius(14, corners: .allCorners)
+                                    Text("Kontynuować")
+                                        .foregroundStyle(Colors.dipBlue.swiftUIColor)
+                                        .font(Fonts.Inter.bold.swiftUIFont(size: 18))
+                                }
+                                .frame(height: 49)
+                                .padding(.horizontal, 80)
+                            }
+                            .disabled(!viewModel.isAgreed)
+                            
+                            Spacer()
                         }
-                    } label: {
-                        Text("Next")
                     }
-                    .disabled(!viewModel.isAgreed)
-                    .opacity(viewModel.isAgreed ? 1 : 0.5)
-                }
             }
-            .padding()
         }
         .sheet(isPresented: $viewModel.showPrivacyPolicy) {
             SwiftUIViewWebView(url: viewModel.privacyPolicyURL)
