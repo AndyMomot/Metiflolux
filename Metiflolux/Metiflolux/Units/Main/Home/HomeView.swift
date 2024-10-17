@@ -11,7 +11,21 @@ struct HomeView: View {
     @StateObject private var viewModel = ViewModel()
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Asset.homeBg.swiftUIImage
+                .resizable()
+                .ignoresSafeArea()
+            
+            VStack {
+                ScrollView {
+                    HomeMenuView { selectedType in
+                        
+                    }
+                }
+                .scrollIndicators(.never)
+            }
+            .ignoresSafeArea(edges: .top)
+        }
     }
 }
 
