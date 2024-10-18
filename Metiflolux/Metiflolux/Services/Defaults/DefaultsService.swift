@@ -7,12 +7,13 @@
 import Foundation
 
 final class DefaultsService {
-    static let standard = UserDefaults.standard
+    static let shared = DefaultsService()
+    private let standard = UserDefaults.standard
     private init() {}
 }
 
 extension DefaultsService {
-    static var flow: RootContentView.ViewState {
+    var flow: RootContentView.ViewState {
         get {
             let name = standard.string(forKey: Keys.flow.rawValue) ?? ""
             return RootContentView.ViewState(rawValue: name) ?? .onboarding
@@ -21,10 +22,25 @@ extension DefaultsService {
             standard.set(newValue.rawValue, forKey: Keys.flow.rawValue)
         }
     }
+    
+    var projects: [ProjectModel] {
+        get {
+            guard let data = standard.object(forKey: Keys.projects.rawValue) as? Data else {
+                return []
+            }
+            let projects = try? JSONDecoder().decode([ProjectModel].self, from: data)
+            return projects ?? []
+        }
+        set {
+            if let data = try? JSONEncoder().encode(newValue) {
+                standard.setValue(data, forKey: Keys.projects.rawValue)
+            }
+        }
+    }
 }
 
 extension DefaultsService {
-    static func removeAll() {
+    func removeAll() {
         if let bundleIdentifier = Bundle.main.bundleIdentifier {
             standard.removePersistentDomain(forName: bundleIdentifier)
         }
@@ -35,5 +51,6 @@ extension DefaultsService {
 extension DefaultsService {
     enum Keys: String {
         case flow
+        case projects
     }
 }

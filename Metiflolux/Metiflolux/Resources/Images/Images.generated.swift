@@ -26,6 +26,7 @@ internal enum Asset {
   internal static let homeBg = ImageAsset(name: "homeBg")
   internal static let homeDocs = ImageAsset(name: "homeDocs")
   internal static let homeFlower = ImageAsset(name: "homeFlower")
+  internal static let homeIcone = ImageAsset(name: "homeIcone")
   internal static let homeInfo = ImageAsset(name: "homeInfo")
   internal static let homeTree = ImageAsset(name: "homeTree")
   internal static let placeholder = ImageAsset(name: "placeholder")

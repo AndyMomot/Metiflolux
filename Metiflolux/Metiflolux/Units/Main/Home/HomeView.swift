@@ -19,12 +19,33 @@ struct HomeView: View {
             VStack {
                 ScrollView {
                     HomeMenuView { selectedType in
-                        
+                        DispatchQueue.main.async {
+                            viewModel.selectedType = selectedType
+                        }
                     }
+                    
+                    switch viewModel.selectedType {
+                    case .home:
+                        EmptyView()
+                    case .flowerShop:
+                        EmptyView()
+                    case .faq:
+                        EmptyView()
+                    case .analytics:
+                        EmptyView()
+                    case .notes:
+                        EmptyView()
+                    }
+                    
                 }
                 .scrollIndicators(.never)
             }
             .ignoresSafeArea(edges: .top)
+        }
+        .onAppear {
+            withAnimation {
+                viewModel.getProjects()
+            }
         }
     }
 }

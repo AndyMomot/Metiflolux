@@ -11,18 +11,23 @@ struct HomeButton: View {
     var type: ButtonType
     var action: (ButtonType) -> Void
     
-    @State private var buttonColor = Colors.dipBlue.swiftUIColor
-    
     var body: some View {
+        var selectionColor: Color {
+            type.isSelected ? Colors.slateGray.swiftUIColor : Colors.dipBlue.swiftUIColor
+        }
+        
         Button {
-            onTap()
+            action(type)
         } label: {
             ZStack {
-                buttonColor
+                selectionColor
                     .cornerRadius(10, corners: [.topRight, .bottomRight])
                 
                 HStack(spacing: 20) {
                     Image(type.image)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 18)
                     
                     Text(type.title)
                         .foregroundStyle(.white)
@@ -39,27 +44,22 @@ struct HomeButton: View {
     }
 }
 
-private extension HomeButton {
-    func onTap() {
-        let duration = 0.3
-        buttonColor = Colors.slateGray.swiftUIColor
-        DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
-            buttonColor = Colors.dipBlue.swiftUIColor
-            action(type)
-        }
-    }
-}
-
 extension HomeButton {
-    enum ButtonType: String, Identifiable {
-        case flowerShop, faq, analytics, notes
+    enum ButtonType: Identifiable {
+        case home(isSelected: Bool)
+        case flowerShop(isSelected: Bool)
+        case faq(isSelected: Bool)
+        case analytics(isSelected: Bool)
+        case notes(isSelected: Bool)
         
         var id: String {
-            rawValue
+            title
         }
         
         var image: String {
             switch self {
+            case .home:
+                return Asset.homeIcone.name
             case .flowerShop:
                 return Asset.homeFlower.name
             case .faq:
@@ -81,12 +81,29 @@ extension HomeButton {
                 return "Analityka"
             case .notes:
                 return "Uwagi dla siebie"
+            case .home:
+                return "Dom"
+            }
+        }
+        
+        var isSelected: Bool {
+            switch self {
+            case .flowerShop(let isSelected):
+                return isSelected
+            case .faq(let isSelected):
+                return isSelected
+            case .analytics(let isSelected):
+                return isSelected
+            case .notes(let isSelected):
+                return isSelected
+            case .home(let isSelected):
+                return isSelected
             }
         }
     }
 }
 
 #Preview {
-    HomeButton(type: .flowerShop) { _ in }
+    HomeButton(type: .flowerShop(isSelected: false)) { _ in }
         .frame(width: 260, height: 50)
 }

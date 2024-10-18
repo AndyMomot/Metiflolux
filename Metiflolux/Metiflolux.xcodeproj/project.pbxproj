@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		473F65C02CC14AE9003652BC /* HomeMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473F65BF2CC14AE9003652BC /* HomeMenuView.swift */; };
 		473F65C32CC14B0C003652BC /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473F65C22CC14B0C003652BC /* HomeButton.swift */; };
+		473F65C62CC23C7C003652BC /* NoProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473F65C52CC23C7C003652BC /* NoProjectsView.swift */; };
+		473F65C82CC23FD2003652BC /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473F65C72CC23FD2003652BC /* ProjectModel.swift */; };
+		473F65CC2CC241F1003652BC /* ImageStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473F65CB2CC241F1003652BC /* ImageStorageManager.swift */; };
 		475A4E852CC13AF9005D811E /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 475A4E842CC13AF9005D811E /* swiftgen.yml */; };
 		475A4E882CC13C30005D811E /* Fonts.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475A4E872CC13C30005D811E /* Fonts.generated.swift */; };
 		475A4E9D2CC13C3E005D811E /* Inter-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 475A4E892CC13C3D005D811E /* Inter-Light.otf */; };
@@ -74,6 +77,9 @@
 /* Begin PBXFileReference section */
 		473F65BF2CC14AE9003652BC /* HomeMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuView.swift; sourceTree = "<group>"; };
 		473F65C22CC14B0C003652BC /* HomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButton.swift; sourceTree = "<group>"; };
+		473F65C52CC23C7C003652BC /* NoProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoProjectsView.swift; sourceTree = "<group>"; };
+		473F65C72CC23FD2003652BC /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
+		473F65CB2CC241F1003652BC /* ImageStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStorageManager.swift; sourceTree = "<group>"; };
 		475A4E842CC13AF9005D811E /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		475A4E872CC13C30005D811E /* Fonts.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.generated.swift; sourceTree = "<group>"; };
 		475A4E892CC13C3D005D811E /* Inter-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.otf"; sourceTree = "<group>"; };
@@ -152,6 +158,7 @@
 		473F65BD2CC14AD0003652BC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				473F65C42CC23C6E003652BC /* NoProjects */,
 				473F65C12CC14AFB003652BC /* HomeButton */,
 				473F65BE2CC14AD9003652BC /* Manu */,
 			);
@@ -172,6 +179,22 @@
 				473F65C22CC14B0C003652BC /* HomeButton.swift */,
 			);
 			path = HomeButton;
+			sourceTree = "<group>";
+		};
+		473F65C42CC23C6E003652BC /* NoProjects */ = {
+			isa = PBXGroup;
+			children = (
+				473F65C52CC23C7C003652BC /* NoProjectsView.swift */,
+			);
+			path = NoProjects;
+			sourceTree = "<group>";
+		};
+		473F65CA2CC241CC003652BC /* ImageStorageManager */ = {
+			isa = PBXGroup;
+			children = (
+				473F65CB2CC241F1003652BC /* ImageStorageManager.swift */,
+			);
+			path = ImageStorageManager;
 			sourceTree = "<group>";
 		};
 		475A4E862CC13C30005D811E /* Fonts */ = {
@@ -395,6 +418,7 @@
 		4772E1A52CC0FEEF00B3E988 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				473F65CA2CC241CC003652BC /* ImageStorageManager */,
 				4772E1A62CC0FEEF00B3E988 /* ImagePicker */,
 				4772E1A82CC0FEEF00B3E988 /* ShareSheet */,
 				4772E1AA2CC0FEEF00B3E988 /* Views */,
@@ -493,6 +517,7 @@
 			isa = PBXGroup;
 			children = (
 				4772E1BC2CC0FEEF00B3E988 /* FAQModel.swift */,
+				473F65C72CC23FD2003652BC /* ProjectModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -632,6 +657,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4772E2052CC0FEEF00B3E988 /* DynamicHeightTextField.swift in Sources */,
+				473F65C62CC23C7C003652BC /* NoProjectsView.swift in Sources */,
 				4772E1F92CC0FEEF00B3E988 /* DefaultsService.swift in Sources */,
 				473F65C02CC14AE9003652BC /* HomeMenuView.swift in Sources */,
 				4772E1F62CC0FEEF00B3E988 /* AppDelegate.swift in Sources */,
@@ -645,6 +671,7 @@
 				4772E1FD2CC0FEEF00B3E988 /* Date+Additions.swift in Sources */,
 				473F65C32CC14B0C003652BC /* HomeButton.swift in Sources */,
 				4772E2012CC0FEEF00B3E988 /* ShareSheet.swift in Sources */,
+				473F65CC2CC241F1003652BC /* ImageStorageManager.swift in Sources */,
 				4772E2062CC0FEEF00B3E988 /* InputField.swift in Sources */,
 				4772E2042CC0FEEF00B3E988 /* SwiftUIViewWebView.swift in Sources */,
 				4772E1F72CC0FEEF00B3E988 /* SceneDelegate.swift in Sources */,
@@ -656,6 +683,7 @@
 				4772E1D62CC0FEEF00B3E988 /* PrivacyPolicyViewModel.swift in Sources */,
 				4772E1F52CC0FEEF00B3E988 /* RootViewController.swift in Sources */,
 				4772E1F32CC0FEEF00B3E988 /* OnboardingViewModel.swift in Sources */,
+				473F65C82CC23FD2003652BC /* ProjectModel.swift in Sources */,
 				4772E1FC2CC0FEEF00B3E988 /* Double+Additions.swift in Sources */,
 				4772E1FF2CC0FEEF00B3E988 /* String+Additions.swift in Sources */,
 				4772E1CF2CC0FEEF00B3E988 /* PreloaderView.swift in Sources */,

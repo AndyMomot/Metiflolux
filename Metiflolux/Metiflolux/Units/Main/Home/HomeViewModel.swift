@@ -9,6 +9,14 @@ import Foundation
 
 extension HomeView {
     final class ViewModel: ObservableObject {
+        @Published var selectedType: HomeButton.ButtonType = .home(isSelected: true)
+        @Published var projects: [ProjectModel] = []
         
+        func getProjects() {
+            DispatchQueue.main.async { [weak self] in
+                guard let self else { return }
+                self.projects = DefaultsService.shared.projects
+            }
+        }
     }
 }

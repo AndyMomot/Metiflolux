@@ -15,13 +15,13 @@ extension RootContentView {
         
         func getFlow() {
             DispatchQueue.main.async { [weak self] in
-                self?.viewState = DefaultsService.flow
+                self?.viewState = DefaultsService.shared.flow
             }
         }
         
         func setFlow(_ flow: ViewState) {
             DispatchQueue.main.async { [weak self] in
-                DefaultsService.flow = flow
+                DefaultsService.shared.flow = flow
                 self?.getFlow()
             }
         }
