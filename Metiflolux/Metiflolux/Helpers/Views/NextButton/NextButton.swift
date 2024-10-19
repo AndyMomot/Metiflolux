@@ -8,11 +8,9 @@
 import SwiftUI
 
 struct NextButton: View {
-    var title: String
-//    var bgColors: [Color] = [
-//        Colors.liteBlue.swiftUIColor,
-//        Colors.darkBlue.swiftUIColor.opacity(0.9)
-//    ]
+    var imageName: String?
+    var title: String?
+    
     var action: () -> Void
     
     var body: some View {
@@ -20,20 +18,26 @@ struct NextButton: View {
             action()
         } label: {
             ZStack {
-//                LinearGradient(
-//                    colors: bgColors,
-//                    startPoint: .leading,
-//                    endPoint: .trailing)
-                
-                Text(title)
-                    .foregroundStyle(.white)
-//                    .font(Fonts.KulimPark.bold.swiftUIFont(size: 20))
-                    .multilineTextAlignment(.center)
-                    .minimumScaleFactor(0.8)
-                    .padding(.horizontal, 8)
-                
+                Colors.dipBlue.swiftUIColor
+                HStack(spacing: 8) {
+                    
+                    if let imageName {
+                        Image(imageName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(maxWidth: 15)
+                    }
+                    
+                    if let title {
+                        Text(title)
+                            .foregroundStyle(.white)
+                            .font(Fonts.Inter.bold.swiftUIFont(size: 18))
+                            .multilineTextAlignment(.center)
+                            .minimumScaleFactor(0.8)
+                    }
+                }
             }
-            .cornerRadius(22, corners: .allCorners)
+            .cornerRadius(14, corners: .allCorners)
             .shadow(radius: 5, y: 5)
         }
     }
@@ -42,7 +46,7 @@ struct NextButton: View {
 #Preview {
     ZStack {
         Color.gray
-        NextButton(title: "Komputeryrerererer") {}
-            .frame(width: 160, height: 44)
+        NextButton(imageName: Asset.plus.name, title: "Komputeryrerererer") {}
+            .frame(width: 265, height: 49)
     }
 }

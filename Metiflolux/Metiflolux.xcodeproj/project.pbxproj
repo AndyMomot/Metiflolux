@@ -72,6 +72,10 @@
 		4772E24E2CC1049700B3E988 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4772E24D2CC1049700B3E988 /* HomeView.swift */; };
 		4772E2502CC1049F00B3E988 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4772E24F2CC1049F00B3E988 /* HomeViewModel.swift */; };
 		4772E2532CC10A4A00B3E988 /* DashedProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4772E2522CC10A4A00B3E988 /* DashedProgressBar.swift */; };
+		47BD3AB92CC3B0FC004CF241 /* CreateProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD3AB82CC3B0FC004CF241 /* CreateProjectView.swift */; };
+		47BD3ABB2CC3B106004CF241 /* CreateProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD3ABA2CC3B106004CF241 /* CreateProjectViewModel.swift */; };
+		47BD3ABE2CC3CA45004CF241 /* ProjectsSnapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD3ABD2CC3CA45004CF241 /* ProjectsSnapperView.swift */; };
+		47BD3AC02CC3CBCF004CF241 /* ProjectsCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD3ABF2CC3CBCF004CF241 /* ProjectsCarouselView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +146,10 @@
 		4772E24D2CC1049700B3E988 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4772E24F2CC1049F00B3E988 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		4772E2522CC10A4A00B3E988 /* DashedProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedProgressBar.swift; sourceTree = "<group>"; };
+		47BD3AB82CC3B0FC004CF241 /* CreateProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectView.swift; sourceTree = "<group>"; };
+		47BD3ABA2CC3B106004CF241 /* CreateProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectViewModel.swift; sourceTree = "<group>"; };
+		47BD3ABD2CC3CA45004CF241 /* ProjectsSnapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsSnapperView.swift; sourceTree = "<group>"; };
+		47BD3ABF2CC3CBCF004CF241 /* ProjectsCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsCarouselView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +337,8 @@
 			isa = PBXGroup;
 			children = (
 				4772E24C2CC1048B00B3E988 /* Home */,
+				47BD3AB72CC3B07F004CF241 /* CreateProject */,
+				47BD3ABC2CC3CA2E004CF241 /* Projects */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -540,6 +550,24 @@
 			path = DashedProgressBar;
 			sourceTree = "<group>";
 		};
+		47BD3AB72CC3B07F004CF241 /* CreateProject */ = {
+			isa = PBXGroup;
+			children = (
+				47BD3AB82CC3B0FC004CF241 /* CreateProjectView.swift */,
+				47BD3ABA2CC3B106004CF241 /* CreateProjectViewModel.swift */,
+			);
+			path = CreateProject;
+			sourceTree = "<group>";
+		};
+		47BD3ABC2CC3CA2E004CF241 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				47BD3ABD2CC3CA45004CF241 /* ProjectsSnapperView.swift */,
+				47BD3ABF2CC3CBCF004CF241 /* ProjectsCarouselView.swift */,
+			);
+			path = Projects;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -656,6 +684,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47BD3AC02CC3CBCF004CF241 /* ProjectsCarouselView.swift in Sources */,
+				47BD3AB92CC3B0FC004CF241 /* CreateProjectView.swift in Sources */,
 				4772E2052CC0FEEF00B3E988 /* DynamicHeightTextField.swift in Sources */,
 				473F65C62CC23C7C003652BC /* NoProjectsView.swift in Sources */,
 				4772E1F92CC0FEEF00B3E988 /* DefaultsService.swift in Sources */,
@@ -686,11 +716,13 @@
 				473F65C82CC23FD2003652BC /* ProjectModel.swift in Sources */,
 				4772E1FC2CC0FEEF00B3E988 /* Double+Additions.swift in Sources */,
 				4772E1FF2CC0FEEF00B3E988 /* String+Additions.swift in Sources */,
+				47BD3ABE2CC3CA45004CF241 /* ProjectsSnapperView.swift in Sources */,
 				4772E1CF2CC0FEEF00B3E988 /* PreloaderView.swift in Sources */,
 				4772E1D72CC0FEEF00B3E988 /* PrivacyPolicyView.swift in Sources */,
 				4772E20A2CC0FEEF00B3E988 /* FAQModel.swift in Sources */,
 				4772E1D42CC0FEEF00B3E988 /* RootContentViewModel.swift in Sources */,
 				4772E1FB2CC0FEEF00B3E988 /* UINavigationController+Additions.swift in Sources */,
+				47BD3ABB2CC3B106004CF241 /* CreateProjectViewModel.swift in Sources */,
 				475A4E882CC13C30005D811E /* Fonts.generated.swift in Sources */,
 				4772E1F42CC0FEEF00B3E988 /* OnboardingViewTabView.swift in Sources */,
 				4772E1D52CC0FEEF00B3E988 /* RootContentView.swift in Sources */,
@@ -845,7 +877,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Metiflolux;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -877,7 +909,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Metiflolux;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

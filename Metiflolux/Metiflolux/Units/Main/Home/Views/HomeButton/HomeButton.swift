@@ -45,7 +45,7 @@ struct HomeButton: View {
 }
 
 extension HomeButton {
-    enum ButtonType: Identifiable {
+    enum ButtonType: Identifiable, Equatable {
         case home(isSelected: Bool)
         case flowerShop(isSelected: Bool)
         case faq(isSelected: Bool)

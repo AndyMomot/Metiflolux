@@ -11,8 +11,8 @@ struct ProjectModel: Identifiable, Codable {
     private(set) var id = UUID().uuidString
     private(set) var date = Date()
     
-    var mainBudjet: Int
     var title: String
+    var mainBudget: Int
     
     var flowersBudjet, salariesBudjet, renovationBudjet, rentingBudjet: Int?
     
@@ -21,6 +21,6 @@ struct ProjectModel: Identifiable, Codable {
     }
     
     var earnings: Int {
-        mainBudjet - costs
+        mainBudget - costs
     }
 }

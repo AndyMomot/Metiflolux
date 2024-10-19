@@ -9,13 +9,9 @@ import SwiftUI
 
 struct HomeMenuView: View {
     
-    var action: (HomeButton.ButtonType) -> Void
+    @Binding var selection: HomeButton.ButtonType
     
-    init(action: @escaping (HomeButton.ButtonType) -> Void) {
-        self.action = action
-    }
-    
-    @State private var buttonTypes: [HomeButton.ButtonType] = [
+    @State private(set) var buttonTypes: [HomeButton.ButtonType] = [
         .home(isSelected: true),
         .flowerShop(isSelected: false),
         .faq(isSelected: false),
@@ -45,8 +41,7 @@ struct HomeMenuView: View {
                     VStack(spacing: 25) {
                         ForEach(buttonTypes) { type in
                             HomeButton(type: type) { selectedType in
-                                action(selectedType)
-                                updateSelection(for: selectedType)
+                                selection = selectedType
                             }
                             .frame(minWidth: bounds.width * 0.6)
                             .frame(height: 50)
@@ -60,6 +55,11 @@ struct HomeMenuView: View {
             }
             .padding(.top, 60)
             .padding(.bottom, 15)
+        }
+        .onChange(of: selection) { newValue in
+            withAnimation {
+                updateSelection(for: newValue)
+            }
         }
     }
 }
@@ -98,7 +98,7 @@ private extension HomeMenuView {
     ZStack {
         Color.gray
             .ignoresSafeArea()
-        HomeMenuView {_ in}
+        HomeMenuView(selection: .constant(.home(isSelected: true)))
             .frame(height: 413)
     }
 }

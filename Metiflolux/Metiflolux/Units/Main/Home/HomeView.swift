@@ -18,17 +18,16 @@ struct HomeView: View {
             
             VStack {
                 ScrollView {
-                    HomeMenuView { selectedType in
-                        DispatchQueue.main.async {
-                            viewModel.selectedType = selectedType
-                        }
-                    }
+                    HomeMenuView(selection: $viewModel.selectedType)
                     
                     switch viewModel.selectedType {
                     case .home:
                         EmptyView()
                     case .flowerShop:
-                        EmptyView()
+                        CreateProjectView {
+                            switchToHome()
+                        }
+                            .padding()
                     case .faq:
                         EmptyView()
                     case .analytics:
@@ -46,6 +45,15 @@ struct HomeView: View {
             withAnimation {
                 viewModel.getProjects()
             }
+        }
+    }
+}
+
+private extension HomeView {
+    func switchToHome() {
+        DispatchQueue.main.async {
+            viewModel.selectedType = .home(isSelected: true)
+            viewModel.getProjects()
         }
     }
 }
