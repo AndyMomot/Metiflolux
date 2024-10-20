@@ -19,8 +19,13 @@ extension CreateProjectView {
         @Published var isValidFields = false
         
         func validateFields() {
-            isValidFields = image != UIImage() && image.jpegData(compressionQuality: 1) != nil &&
-            !projectName.isEmpty && Int(projectBudget) ?? .zero > .zero
+            DispatchQueue.main.async { [weak self] in
+                guard let self else { return }
+                self.isValidFields = self.image != UIImage() &&
+                self.image.jpegData(compressionQuality: 1) != nil &&
+                !self.projectName.isEmpty &&
+                Int(self.projectBudget) ?? .zero > .zero
+            }
         }
         
         func createProject(completion: @escaping () -> Void) {

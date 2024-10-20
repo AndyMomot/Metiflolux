@@ -73,12 +73,12 @@ struct CreateProjectView: View {
                 viewModel.validateFields()
             }
         }
-        onChange(of: viewModel.projectName) { _ in
+        .onChange(of: viewModel.projectName) { _ in
             withAnimation {
                 viewModel.validateFields()
             }
         }
-        onChange(of: viewModel.projectName) { _ in
+        .onChange(of: viewModel.projectBudget) { _ in
             withAnimation {
                 viewModel.validateFields()
             }

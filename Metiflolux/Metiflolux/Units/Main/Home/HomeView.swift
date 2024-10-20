@@ -10,40 +10,56 @@ import SwiftUI
 struct HomeView: View {
     @StateObject private var viewModel = ViewModel()
     
+    private var bounds: CGRect {
+        UIScreen.main.bounds
+    }
+    
     var body: some View {
-        ZStack {
-            Asset.homeBg.swiftUIImage
-                .resizable()
-                .ignoresSafeArea()
-            
-            VStack {
-                ScrollView {
-                    HomeMenuView(selection: $viewModel.selectedType)
-                    
-                    switch viewModel.selectedType {
-                    case .home:
-                        EmptyView()
-                    case .flowerShop:
-                        CreateProjectView {
-                            switchToHome()
+        NavigationStack {
+            ZStack {
+                Asset.homeBg.swiftUIImage
+                    .resizable()
+                    .ignoresSafeArea()
+                
+                VStack {
+                    ScrollView {
+                        VStack(spacing: 33) {
+                            HomeMenuView(selection: $viewModel.selectedType)
+                            
+                            switch viewModel.selectedType {
+                            case .home:
+                                MyProjectsView(projects: viewModel.projects) { action in
+                                    withAnimation {
+                                        viewModel.handleProject(action: action)
+                                    }
+                                }
+                            case .flowerShop:
+                                CreateProjectView {
+                                    switchToHome()
+                                }
+                                .padding()
+                            case .faq:
+                                EmptyView()
+                            case .analytics:
+                                EmptyView()
+                            case .notes:
+                                EmptyView()
+                            }
                         }
-                            .padding()
-                    case .faq:
-                        EmptyView()
-                    case .analytics:
-                        EmptyView()
-                    case .notes:
-                        EmptyView()
                     }
-                    
+                    .scrollIndicators(.never)
                 }
-                .scrollIndicators(.never)
+                .ignoresSafeArea(edges: .top)
             }
-            .ignoresSafeArea(edges: .top)
-        }
-        .onAppear {
-            withAnimation {
-                viewModel.getProjects()
+            .onAppear {
+                withAnimation {
+                    viewModel.getProjects()
+                }
+            }
+            .navigationDestination(isPresented: $viewModel.showProjectDetails) {
+                if let project = viewModel.projectToShow {
+                    ProjectDetailsView(project: project)
+                }
             }
         }
     }

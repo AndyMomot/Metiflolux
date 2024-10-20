@@ -9,18 +9,15 @@ import SwiftUI
 
 struct ProjectsCarouselView: View {
     var projects: [ProjectModel]
-    var onSelect: (Int) -> Void
     var action: (ProjectModel) -> Void
     
     @State private var selectedIndex = 0
     
     var body: some View {
         let range = (0..<projects.count)
-        
-        VStack(spacing: 16) {
+        VStack(spacing: .zero) {
             GeometryReader { reader in
                 ProjectsSnapperView(size: reader.size, projects: projects) { index in
-                    onSelect(index)
                     withAnimation {
                         self.selectedIndex = index
                     }
@@ -28,6 +25,8 @@ struct ProjectsCarouselView: View {
                     action(project)
                 }
             }
+            
+            Spacer(minLength: 20)
             
             HStack(spacing: 8) {
                 ForEach(range, id: \.self) { index in
@@ -39,6 +38,10 @@ struct ProjectsCarouselView: View {
                         .frame(width: 8)
                 }
             }
+            .padding(.vertical, 6)
+            .padding(.horizontal, 9)
+            .background(.white)
+            .cornerRadius(10, corners: .allCorners)
         }
     }
 }
@@ -51,7 +54,6 @@ struct ProjectsCarouselView: View {
         .init(title: "Test 4", mainBudget: 100),
     ]) { _ in
         
-    } action: { _ in
-        
     }
+    .frame(height: 300)
 }

@@ -59,7 +59,7 @@ private extension PreloaderView {
         timer?.invalidate()
         timer = nil
         
-        timer = .scheduledTimer(withTimeInterval: 0.3,
+        timer = .scheduledTimer(withTimeInterval: 0.2,
                                 repeats: true, block: { timer in
             let newValue = progress + 1
             updateProgress(value: newValue,

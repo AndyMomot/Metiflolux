@@ -16,7 +16,7 @@ struct ProjectsSnapperView: View {
     
     private let padding: CGFloat
     private let cardWidth: CGFloat
-    private let spacing: CGFloat = 15.0
+    private let spacing: CGFloat = 25.0
     private let maxSwipeDistance: CGFloat
     
     @State private var selectedIndex: Int = 1
@@ -31,7 +31,7 @@ struct ProjectsSnapperView: View {
         self.projects = projects
         self.onSelect = onSelect
         self.action = action
-        self.cardWidth = size.width * 0.8
+        self.cardWidth = size.width * 0.46
         self.padding = (size.width - cardWidth) / 2.0
         self.maxSwipeDistance = cardWidth + spacing
     }
@@ -43,19 +43,13 @@ struct ProjectsSnapperView: View {
             ForEach(range, id: \.self) { index in
                 let project = projects[index]
                 let isSelected = index == (self.selectedIndex - 1)
-
-                HStack {
-                    Spacer()
-                    Text(project.title)
-                        .offset(x: isDragging ? totalDrag : 0)
-                        .animation(.snappy(duration: 0.4, extraBounce: 0.2), value: isDragging)
-                        .onTapGesture {
-                            action(project)
-                        }
-                    Spacer()
-                }
-                .frame(width: cardWidth)
-                .background(.blue)
+                
+                ProjectView(item: project, width: cardWidth, isSelected: isSelected)
+                    .offset(x: isDragging ? totalDrag : 0)
+                    .animation(.snappy(duration: 0.4, extraBounce: 0.2), value: isDragging)
+                    .onTapGesture {
+                        action(project)
+                    }
             }
         }
         .padding(.horizontal, padding)
