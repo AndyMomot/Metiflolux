@@ -51,7 +51,6 @@
 		4772E1F52CC0FEEF00B3E988 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4772E1952CC0FEEF00B3E988 /* RootViewController.swift */; };
 		4772E1F62CC0FEEF00B3E988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4772E1962CC0FEEF00B3E988 /* AppDelegate.swift */; };
 		4772E1F72CC0FEEF00B3E988 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4772E1972CC0FEEF00B3E988 /* SceneDelegate.swift */; };
-		4772E1F82CC0FEEF00B3E988 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4772E19A2CC0FEEF00B3E988 /* NotificationManager.swift */; };
 		4772E1F92CC0FEEF00B3E988 /* DefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4772E19C2CC0FEEF00B3E988 /* DefaultsService.swift */; };
 		4772E1FA2CC0FEEF00B3E988 /* FileManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4772E19E2CC0FEEF00B3E988 /* FileManagerService.swift */; };
 		4772E1FB2CC0FEEF00B3E988 /* UINavigationController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4772E1A02CC0FEEF00B3E988 /* UINavigationController+Additions.swift */; };
@@ -82,6 +81,9 @@
 		47BD3ACB2CC507AB004CF241 /* ProjectDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD3ACA2CC507AB004CF241 /* ProjectDetailsViewModel.swift */; };
 		47C2CF7F2CC67E4E001A2B6F /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C2CF7E2CC67E4E001A2B6F /* FAQView.swift */; };
 		47C2CF812CC67E54001A2B6F /* FAQViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C2CF802CC67E54001A2B6F /* FAQViewModel.swift */; };
+		47C2CF872CC697AF001A2B6F /* CreateCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C2CF862CC697AF001A2B6F /* CreateCommentView.swift */; };
+		47C2CF892CC697BE001A2B6F /* CreateCommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C2CF882CC697BE001A2B6F /* CreateCommentViewModel.swift */; };
+		47C2CF8B2CC699B2001A2B6F /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C2CF8A2CC699B2001A2B6F /* CommentModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -131,7 +133,6 @@
 		4772E1952CC0FEEF00B3E988 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		4772E1962CC0FEEF00B3E988 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4772E1972CC0FEEF00B3E988 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4772E19A2CC0FEEF00B3E988 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		4772E19C2CC0FEEF00B3E988 /* DefaultsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsService.swift; sourceTree = "<group>"; };
 		4772E19E2CC0FEEF00B3E988 /* FileManagerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerService.swift; sourceTree = "<group>"; };
 		4772E1A02CC0FEEF00B3E988 /* UINavigationController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Additions.swift"; sourceTree = "<group>"; };
@@ -162,6 +163,9 @@
 		47BD3ACA2CC507AB004CF241 /* ProjectDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewModel.swift; sourceTree = "<group>"; };
 		47C2CF7E2CC67E4E001A2B6F /* FAQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQView.swift; sourceTree = "<group>"; };
 		47C2CF802CC67E54001A2B6F /* FAQViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewModel.swift; sourceTree = "<group>"; };
+		47C2CF862CC697AF001A2B6F /* CreateCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommentView.swift; sourceTree = "<group>"; };
+		47C2CF882CC697BE001A2B6F /* CreateCommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommentViewModel.swift; sourceTree = "<group>"; };
+		47C2CF8A2CC699B2001A2B6F /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,6 +347,7 @@
 				47BD3AB72CC3B07F004CF241 /* CreateProject */,
 				47BD3ABC2CC3CA2E004CF241 /* Projects */,
 				47C2CF7D2CC67E3E001A2B6F /* FAQ */,
+				47C2CF842CC69790001A2B6F /* Comments */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -386,19 +391,10 @@
 		4772E1982CC0FEEF00B3E988 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				4772E1992CC0FEEF00B3E988 /* NotificationManager */,
 				4772E19B2CC0FEEF00B3E988 /* Defaults */,
 				4772E19D2CC0FEEF00B3E988 /* FileManager */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		4772E1992CC0FEEF00B3E988 /* NotificationManager */ = {
-			isa = PBXGroup;
-			children = (
-				4772E19A2CC0FEEF00B3E988 /* NotificationManager.swift */,
-			);
-			path = NotificationManager;
 			sourceTree = "<group>";
 		};
 		4772E19B2CC0FEEF00B3E988 /* Defaults */ = {
@@ -532,6 +528,7 @@
 			children = (
 				4772E1BC2CC0FEEF00B3E988 /* FAQModel.swift */,
 				473F65C72CC23FD2003652BC /* ProjectModel.swift */,
+				47C2CF8A2CC699B2001A2B6F /* CommentModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -600,6 +597,23 @@
 				47C2CF802CC67E54001A2B6F /* FAQViewModel.swift */,
 			);
 			path = FAQ;
+			sourceTree = "<group>";
+		};
+		47C2CF842CC69790001A2B6F /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				47C2CF852CC6979F001A2B6F /* CreateComment */,
+			);
+			path = Comments;
+			sourceTree = "<group>";
+		};
+		47C2CF852CC6979F001A2B6F /* CreateComment */ = {
+			isa = PBXGroup;
+			children = (
+				47C2CF862CC697AF001A2B6F /* CreateCommentView.swift */,
+				47C2CF882CC697BE001A2B6F /* CreateCommentViewModel.swift */,
+			);
+			path = CreateComment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -727,6 +741,7 @@
 				473F65C02CC14AE9003652BC /* HomeMenuView.swift in Sources */,
 				4772E1F62CC0FEEF00B3E988 /* AppDelegate.swift in Sources */,
 				4772E2002CC0FEEF00B3E988 /* ImagePicker.swift in Sources */,
+				47C2CF872CC697AF001A2B6F /* CreateCommentView.swift in Sources */,
 				4772E1C12CC0FEEF00B3E988 /* Colors.generated.swift in Sources */,
 				4772E2092CC0FEEF00B3E988 /* NextButton.swift in Sources */,
 				4772E2082CC0FEEF00B3E988 /* CircularProgressBar.swift in Sources */,
@@ -735,6 +750,7 @@
 				4772E1BF2CC0FEEF00B3E988 /* Images.generated.swift in Sources */,
 				4772E1FD2CC0FEEF00B3E988 /* Date+Additions.swift in Sources */,
 				473F65C32CC14B0C003652BC /* HomeButton.swift in Sources */,
+				47C2CF892CC697BE001A2B6F /* CreateCommentViewModel.swift in Sources */,
 				4772E2012CC0FEEF00B3E988 /* ShareSheet.swift in Sources */,
 				47C2CF7F2CC67E4E001A2B6F /* FAQView.swift in Sources */,
 				473F65CC2CC241F1003652BC /* ImageStorageManager.swift in Sources */,
@@ -744,7 +760,6 @@
 				4772E2072CC0FEEF00B3E988 /* BackButton.swift in Sources */,
 				4772E1FE2CC0FEEF00B3E988 /* View+Additions.swift in Sources */,
 				4772E2532CC10A4A00B3E988 /* DashedProgressBar.swift in Sources */,
-				4772E1F82CC0FEEF00B3E988 /* NotificationManager.swift in Sources */,
 				4772E2502CC1049F00B3E988 /* HomeViewModel.swift in Sources */,
 				4772E1D62CC0FEEF00B3E988 /* PrivacyPolicyViewModel.swift in Sources */,
 				4772E1F52CC0FEEF00B3E988 /* RootViewController.swift in Sources */,
@@ -757,6 +772,7 @@
 				4772E1CF2CC0FEEF00B3E988 /* PreloaderView.swift in Sources */,
 				4772E1D72CC0FEEF00B3E988 /* PrivacyPolicyView.swift in Sources */,
 				4772E20A2CC0FEEF00B3E988 /* FAQModel.swift in Sources */,
+				47C2CF8B2CC699B2001A2B6F /* CommentModel.swift in Sources */,
 				4772E1D42CC0FEEF00B3E988 /* RootContentViewModel.swift in Sources */,
 				4772E1FB2CC0FEEF00B3E988 /* UINavigationController+Additions.swift in Sources */,
 				47BD3ABB2CC3B106004CF241 /* CreateProjectViewModel.swift in Sources */,

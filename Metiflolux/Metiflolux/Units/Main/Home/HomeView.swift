@@ -53,7 +53,7 @@ struct HomeView: View {
             }
             .onAppear {
                 withAnimation {
-                    viewModel.getProjects()
+                    viewModel.getItems()
                 }
             }
             .navigationDestination(isPresented: $viewModel.showProjectDetails) {
@@ -61,7 +61,7 @@ struct HomeView: View {
                     ProjectDetailsView(project: project) {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                             withAnimation {
-                                viewModel.getProjects()
+                                viewModel.getItems()
                             }
                         }
                     }
@@ -86,7 +86,7 @@ private extension HomeView {
     func switchToHome() {
         DispatchQueue.main.async {
             viewModel.selectedType = .home(isSelected: true)
-            viewModel.getProjects()
+            viewModel.getItems()
         }
     }
 }

@@ -37,6 +37,21 @@ extension DefaultsService {
             }
         }
     }
+    
+    var comments: [CommentModel] {
+        get {
+            guard let data = standard.object(forKey: Keys.comments.rawValue) as? Data else {
+                return []
+            }
+            let comments = try? JSONDecoder().decode([CommentModel].self, from: data)
+            return comments ?? []
+        }
+        set {
+            if let data = try? JSONEncoder().encode(newValue) {
+                standard.setValue(data, forKey: Keys.comments.rawValue)
+            }
+        }
+    }
 }
 
 extension DefaultsService {
@@ -52,5 +67,6 @@ extension DefaultsService {
     enum Keys: String {
         case flow
         case projects
+        case comments
     }
 }
