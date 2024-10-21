@@ -39,6 +39,7 @@ internal enum Asset {
   internal static let privacyPhone = ImageAsset(name: "privacyPhone")
   internal static let preLoaderBg = ImageAsset(name: "preLoaderBg")
   internal static let preLoaderLogo = ImageAsset(name: "preLoaderLogo")
+  internal static let info = ImageAsset(name: "info")
   internal static let plus = ImageAsset(name: "plus")
   internal static let projectDetailsBg = ImageAsset(name: "projectDetailsBg")
   internal static let share = ImageAsset(name: "share")

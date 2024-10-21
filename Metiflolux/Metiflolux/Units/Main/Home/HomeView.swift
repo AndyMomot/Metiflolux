@@ -58,7 +58,13 @@ struct HomeView: View {
             }
             .navigationDestination(isPresented: $viewModel.showProjectDetails) {
                 if let project = viewModel.projectToShow {
-                    ProjectDetailsView(project: project)
+                    ProjectDetailsView(project: project) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                            withAnimation {
+                                viewModel.getProjects()
+                            }
+                        }
+                    }
                 }
             }
         }

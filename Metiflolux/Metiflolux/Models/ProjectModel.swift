@@ -14,10 +14,10 @@ struct ProjectModel: Identifiable, Codable {
     var title: String
     var mainBudget: Int
     
-    var flowersBudjet, salariesBudjet, renovationBudjet, rentingBudjet: Int?
+    var flowersBudget, salariesBudget, renovationBudget, rentingBudget: Int?
     
     var costs: Int {
-        (flowersBudjet ?? .zero) + (salariesBudjet ?? .zero) + (renovationBudjet ?? .zero) + (rentingBudjet ?? .zero)
+        (flowersBudget ?? .zero) + (salariesBudget ?? .zero) + (renovationBudget ?? .zero) + (rentingBudget ?? .zero)
     }
     
     var earnings: Int {
