@@ -67,6 +67,17 @@ struct HomeView: View {
                     }
                 }
             }
+            .navigationDestination(isPresented: $viewModel.showFAQ) {
+                FAQView()
+            }
+        }
+        .onChange(of: viewModel.selectedType) { newValue in
+            switch newValue {
+            case .faq:
+                viewModel.showFAQ.toggle()
+            default:
+                break
+            }
         }
     }
 }

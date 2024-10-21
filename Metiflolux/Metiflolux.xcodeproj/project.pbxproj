@@ -80,6 +80,8 @@
 		47BD3AC52CC50103004CF241 /* MyProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD3AC42CC50103004CF241 /* MyProjectsView.swift */; };
 		47BD3AC92CC507A5004CF241 /* ProjectDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD3AC82CC507A5004CF241 /* ProjectDetailsView.swift */; };
 		47BD3ACB2CC507AB004CF241 /* ProjectDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD3ACA2CC507AB004CF241 /* ProjectDetailsViewModel.swift */; };
+		47C2CF7F2CC67E4E001A2B6F /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C2CF7E2CC67E4E001A2B6F /* FAQView.swift */; };
+		47C2CF812CC67E54001A2B6F /* FAQViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C2CF802CC67E54001A2B6F /* FAQViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -158,6 +160,8 @@
 		47BD3AC42CC50103004CF241 /* MyProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProjectsView.swift; sourceTree = "<group>"; };
 		47BD3AC82CC507A5004CF241 /* ProjectDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsView.swift; sourceTree = "<group>"; };
 		47BD3ACA2CC507AB004CF241 /* ProjectDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewModel.swift; sourceTree = "<group>"; };
+		47C2CF7E2CC67E4E001A2B6F /* FAQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQView.swift; sourceTree = "<group>"; };
+		47C2CF802CC67E54001A2B6F /* FAQViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,6 +342,7 @@
 				4772E24C2CC1048B00B3E988 /* Home */,
 				47BD3AB72CC3B07F004CF241 /* CreateProject */,
 				47BD3ABC2CC3CA2E004CF241 /* Projects */,
+				47C2CF7D2CC67E3E001A2B6F /* FAQ */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -588,6 +593,15 @@
 			path = ProjectDetails;
 			sourceTree = "<group>";
 		};
+		47C2CF7D2CC67E3E001A2B6F /* FAQ */ = {
+			isa = PBXGroup;
+			children = (
+				47C2CF7E2CC67E4E001A2B6F /* FAQView.swift */,
+				47C2CF802CC67E54001A2B6F /* FAQViewModel.swift */,
+			);
+			path = FAQ;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -722,6 +736,7 @@
 				4772E1FD2CC0FEEF00B3E988 /* Date+Additions.swift in Sources */,
 				473F65C32CC14B0C003652BC /* HomeButton.swift in Sources */,
 				4772E2012CC0FEEF00B3E988 /* ShareSheet.swift in Sources */,
+				47C2CF7F2CC67E4E001A2B6F /* FAQView.swift in Sources */,
 				473F65CC2CC241F1003652BC /* ImageStorageManager.swift in Sources */,
 				4772E2062CC0FEEF00B3E988 /* InputField.swift in Sources */,
 				4772E2042CC0FEEF00B3E988 /* SwiftUIViewWebView.swift in Sources */,
@@ -752,6 +767,7 @@
 				47BD3AC22CC4F14B004CF241 /* ProjectView.swift in Sources */,
 				4772E1FA2CC0FEEF00B3E988 /* FileManagerService.swift in Sources */,
 				4772E2032CC0FEEF00B3E988 /* LinearProgressBar.swift in Sources */,
+				47C2CF812CC67E54001A2B6F /* FAQViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

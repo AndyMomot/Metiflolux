@@ -9,6 +9,5 @@ import Foundation
 
 struct FAQModel: Identifiable {
     private(set) var id = UUID().uuidString
-    var title: String
-    var text: String
+    var image, title, text: String
 }

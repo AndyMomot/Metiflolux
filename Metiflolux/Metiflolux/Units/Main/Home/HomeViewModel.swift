@@ -15,6 +15,8 @@ extension HomeView {
         @Published var showProjectDetails = false
         var projectToShow: ProjectModel?
         
+        @Published var showFAQ = false
+        
         func getProjects() {
             DispatchQueue.main.async { [weak self] in
                 guard let self else { return }
