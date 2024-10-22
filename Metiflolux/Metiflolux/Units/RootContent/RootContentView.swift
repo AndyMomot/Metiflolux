@@ -31,7 +31,9 @@ struct RootContentView: View {
         }
         .onReceive(preloaderView.onDidLoad) {
             withAnimation {
-                self.viewModel.showPreloader.toggle()
+                DispatchQueue.main.async {
+                    self.viewModel.showPreloader.toggle()
+                }
             }
         }
     }

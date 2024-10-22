@@ -41,7 +41,8 @@ struct HomeView: View {
                             case .faq:
                                 EmptyView()
                             case .analytics:
-                                EmptyView()
+                                ProjectStatisticListView(projects: viewModel.projects)
+                                    .padding()
                             case .notes:
                                 if viewModel.showCreateComment {
                                     CreateCommentView { // on create

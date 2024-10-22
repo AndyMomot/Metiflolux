@@ -8,28 +8,31 @@
 import SwiftUI
 
 struct CircularProgressBar: View {
-    var backgroundColor: Color = .black
+    var progress: Double
+    
+    var backgroundLineColor: Color = .black
+    var progressLineColors: Color = .red
     var lineWidth: CGFloat = 18
     var lineCap: CGLineCap = .butt
-    var progressColors: Color = .red
     
-    var textColor: Color = .blue
+    var title: String?
+    var titleColor: Color = .blue
+    
+    var progressColor: Color = .blue
     var font: SwiftUI.Font?
-    
-    var progress: Double
     
     var body: some View {
         ZStack {
             Circle()
                 .stroke(
-                    backgroundColor,
+                    backgroundLineColor,
                     lineWidth: lineWidth
                 )
             
             Circle()
                 .trim(from: 0, to: progress)
                 .stroke(
-                    progressColors,
+                    progressLineColors,
                     style: .init(
                         lineWidth: lineWidth,
                         lineCap: lineCap
@@ -38,11 +41,21 @@ struct CircularProgressBar: View {
                 .rotationEffect(.degrees(-90))
                 .animation(.easeOut, value: progress)
             
-            Text((progress * 100).string() + "%")
-                .foregroundStyle(textColor)
-                .font(font)
-                .lineLimit(2)
-                .minimumScaleFactor(0.6)
+            VStack(spacing: 5) {
+                if let title {
+                    Text(title)
+                        .foregroundStyle(titleColor)
+                        .font(font)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.6)
+                }
+                
+                Text((progress * 100).string() + "%")
+                    .foregroundStyle(progressColor)
+                    .font(font)
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.6)
+            }
         }
     }
 }
