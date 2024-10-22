@@ -15,7 +15,7 @@ struct DynamicHeightTextField: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
             Text(title)
-                .foregroundStyle(.black)
+                .foregroundStyle(.white)
                 .font(Fonts.Inter.light.swiftUIFont(size: 13))
             
             ZStack(alignment: .topLeading) {

@@ -77,8 +77,10 @@ struct ProjectView: View {
         .cornerRadius(17, corners: .allCorners)
         .shadow(radius: 4, y: 4)
         .onAppear {
-            Task {
-                image = await getImage(with: item.id)
+            DispatchQueue.main.async {
+                Task {
+                    image = await getImage(with: item.id)
+                }
             }
         }
     }

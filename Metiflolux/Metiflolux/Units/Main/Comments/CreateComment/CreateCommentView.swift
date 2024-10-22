@@ -41,10 +41,24 @@ struct CreateCommentView: View {
                     }
                     
                     // Text field
-                    InputField(
-                        title: "Tytuł notatki",
-                        placeholder: "Opracowanie budżetu",
-                        text: $viewModel.name)
+                    VStack {
+                        HStack {
+                            Spacer()
+                            Button {
+                                onCreate()
+                            } label: {
+                                Image(systemName: "xmark")
+                                    .foregroundStyle(.black)
+                                    .font(Fonts.Inter.bold.swiftUIFont(size: 15))
+                            }
+                            .frame(width: 24, height: 24)
+                        }
+                        
+                        InputField(
+                            title: "Tytuł notatki",
+                            placeholder: "Opracowanie budżetu",
+                            text: $viewModel.name)
+                    }
                 }
                 
                 DynamicHeightTextField(

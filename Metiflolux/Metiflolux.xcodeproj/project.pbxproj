@@ -84,6 +84,8 @@
 		47C2CF872CC697AF001A2B6F /* CreateCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C2CF862CC697AF001A2B6F /* CreateCommentView.swift */; };
 		47C2CF892CC697BE001A2B6F /* CreateCommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C2CF882CC697BE001A2B6F /* CreateCommentViewModel.swift */; };
 		47C2CF8B2CC699B2001A2B6F /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C2CF8A2CC699B2001A2B6F /* CommentModel.swift */; };
+		47DD592C2CC7A78C008A623A /* CommentsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DD592B2CC7A78C008A623A /* CommentsListView.swift */; };
+		47DD59312CC7A967008A623A /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DD59302CC7A967008A623A /* CommentCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,6 +168,8 @@
 		47C2CF862CC697AF001A2B6F /* CreateCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommentView.swift; sourceTree = "<group>"; };
 		47C2CF882CC697BE001A2B6F /* CreateCommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommentViewModel.swift; sourceTree = "<group>"; };
 		47C2CF8A2CC699B2001A2B6F /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
+		47DD592B2CC7A78C008A623A /* CommentsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsListView.swift; sourceTree = "<group>"; };
+		47DD59302CC7A967008A623A /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -602,6 +606,7 @@
 		47C2CF842CC69790001A2B6F /* Comments */ = {
 			isa = PBXGroup;
 			children = (
+				47DD592A2CC7A77D008A623A /* CommentsList */,
 				47C2CF852CC6979F001A2B6F /* CreateComment */,
 			);
 			path = Comments;
@@ -614,6 +619,15 @@
 				47C2CF882CC697BE001A2B6F /* CreateCommentViewModel.swift */,
 			);
 			path = CreateComment;
+			sourceTree = "<group>";
+		};
+		47DD592A2CC7A77D008A623A /* CommentsList */ = {
+			isa = PBXGroup;
+			children = (
+				47DD592B2CC7A78C008A623A /* CommentsListView.swift */,
+				47DD59302CC7A967008A623A /* CommentCell.swift */,
+			);
+			path = CommentsList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -735,6 +749,7 @@
 				47BD3AC02CC3CBCF004CF241 /* ProjectsCarouselView.swift in Sources */,
 				47BD3AB92CC3B0FC004CF241 /* CreateProjectView.swift in Sources */,
 				4772E2052CC0FEEF00B3E988 /* DynamicHeightTextField.swift in Sources */,
+				47DD592C2CC7A78C008A623A /* CommentsListView.swift in Sources */,
 				473F65C62CC23C7C003652BC /* NoProjectsView.swift in Sources */,
 				47BD3AC52CC50103004CF241 /* MyProjectsView.swift in Sources */,
 				4772E1F92CC0FEEF00B3E988 /* DefaultsService.swift in Sources */,
@@ -755,6 +770,7 @@
 				47C2CF7F2CC67E4E001A2B6F /* FAQView.swift in Sources */,
 				473F65CC2CC241F1003652BC /* ImageStorageManager.swift in Sources */,
 				4772E2062CC0FEEF00B3E988 /* InputField.swift in Sources */,
+				47DD59312CC7A967008A623A /* CommentCell.swift in Sources */,
 				4772E2042CC0FEEF00B3E988 /* SwiftUIViewWebView.swift in Sources */,
 				4772E1F72CC0FEEF00B3E988 /* SceneDelegate.swift in Sources */,
 				4772E2072CC0FEEF00B3E988 /* BackButton.swift in Sources */,

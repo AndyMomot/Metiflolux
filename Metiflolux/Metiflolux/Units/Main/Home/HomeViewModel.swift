@@ -18,11 +18,13 @@ extension HomeView {
         
         @Published var showFAQ = false
         
+        @Published var showCreateComment = false
+        
         func getItems() {
             DispatchQueue.main.async { [weak self] in
                 guard let self else { return }
-                self.projects = DefaultsService.shared.projects
-                self.comments = DefaultsService.shared.comments
+                self.projects = DefaultsService.shared.projects.sorted(by: {$0.date > $1.date})
+                self.comments = DefaultsService.shared.comments.sorted(by: {$0.date > $1.date})
             }
         }
         
@@ -35,6 +37,23 @@ extension HomeView {
                 DispatchQueue.main.async { [weak self] in
                     guard let self else { return }
                     self.selectedType = .flowerShop(isSelected: true)
+                }
+            }
+        }
+        
+        func handleComments(action: CommentsListView.ViewAction) {
+            switch action {
+            case .onCreate:
+                showCreateComment = true
+            case .onDelete(let id):
+                DispatchQueue.main.async { [weak self] in
+                    guard let self else { return }
+                    if let index = DefaultsService.shared.comments.firstIndex(where: {
+                        $0.id == id
+                    }) {
+                        DefaultsService.shared.comments.remove(at: index)
+                        self.getItems()
+                    }
                 }
             }
         }

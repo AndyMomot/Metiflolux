@@ -44,9 +44,6 @@ struct InputField: View {
             .background(.white)
             .cornerRadius(20, corners: .allCorners)
         }
-        .onChange(of: isInputActive) { newValue in
-            print(newValue)
-        }
     }
 }
 

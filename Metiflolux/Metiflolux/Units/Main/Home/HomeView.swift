@@ -43,7 +43,21 @@ struct HomeView: View {
                             case .analytics:
                                 EmptyView()
                             case .notes:
-                                EmptyView()
+                                if viewModel.showCreateComment {
+                                    CreateCommentView { // on create
+                                        withAnimation {
+                                            viewModel.showCreateComment = false
+                                            viewModel.getItems()
+                                        }
+                                    }
+                                    .padding()
+                                } else {
+                                    CommentsListView(comments: viewModel.comments) { action in
+                                        withAnimation {
+                                            viewModel.handleComments(action: action)
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
