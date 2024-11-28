@@ -2,7 +2,6 @@
 //  ImagePicker.swift
 //  Chainestery
 //
-//  Created by Andrii Momot on 18.08.2024.
 //
 
 import SwiftUI

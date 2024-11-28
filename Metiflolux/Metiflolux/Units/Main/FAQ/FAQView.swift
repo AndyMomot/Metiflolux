@@ -2,7 +2,6 @@
 //  FAQView.swift
 //  Metiflolux
 //
-//  Created by Andrii Momot on 21.10.2024.
 //
 
 import SwiftUI

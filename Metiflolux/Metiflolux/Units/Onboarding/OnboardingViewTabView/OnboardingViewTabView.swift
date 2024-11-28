@@ -2,7 +2,6 @@
 //  OnboardingViewTabView.swift
 //  Goobeltoin
 //
-//  Created by Andrii Momot on 12.06.2024.
 //
 
 import SwiftUI

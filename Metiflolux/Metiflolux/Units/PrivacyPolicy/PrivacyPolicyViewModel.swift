@@ -2,7 +2,6 @@
 //  PrivacyPolicyViewModel.swift
 //  Chainestery
 //
-//  Created by Andrii Momot on 17.08.2024.
 //
 
 import Foundation
@@ -11,7 +10,7 @@ extension PrivacyPolicyView {
     final class PrivacyPolicyViewModel: ObservableObject {
         @Published var isAgreed = false
         @Published var showPrivacyPolicy = false
-        let privacyPolicyURL = URL(string: "https://google.com")
+        let privacyPolicyURL = URL(string: "https://metiflolux.info")
         
         func showMainFlow(rootViewModel: RootContentView.RootContentViewModel) {
             DispatchQueue.main.async {

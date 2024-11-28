@@ -2,7 +2,6 @@
 //  ProjectStatisticCell.swift
 //  Metiflolux
 //
-//  Created by Andrii Momot on 22.10.2024.
 //
 
 import SwiftUI

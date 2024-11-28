@@ -2,7 +2,6 @@
 //  DynamicHeightTextField.swift
 //  Chainestery
 //
-//  Created by Andrii Momot on 21.08.2024.
 //
 
 import SwiftUI

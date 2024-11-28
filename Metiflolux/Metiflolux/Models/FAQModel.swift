@@ -2,7 +2,6 @@
 //  FAQModel.swift
 //  Libarorent
 //
-//  Created by Andrii Momot on 09.10.2024.
 //
 
 import Foundation

@@ -2,7 +2,6 @@
 //  BackButton.swift
 //  Libarorent
 //
-//  Created by Andrii Momot on 07.10.2024.
 //
 
 import SwiftUI

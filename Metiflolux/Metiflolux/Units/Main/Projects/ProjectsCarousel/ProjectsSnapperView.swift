@@ -2,7 +2,6 @@
 //  ProjectsSnapperView.swift
 //  Metiflolux
 //
-//  Created by Andrii Momot on 19.10.2024.
 //
 
 import SwiftUI
